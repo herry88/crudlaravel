@@ -1,4 +1,4 @@
-@extends('product.layout')
+@extends('product.layouts')
 
 @section('content')
     <div class="row">
@@ -7,13 +7,16 @@
                 <h2>Laravel 10 </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('product.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product</a>
             </div>
         </div>
     </div>
 
     @if ($message = Session::get('success'))
-        <div class="alert alert-success">
+        <div class="alert al.create') }}"> Create New Product</a>
+        </div>
+    </div>
+</div>ert-success">
             <p>{{ $message }}</p>
         </div>
     @endif
