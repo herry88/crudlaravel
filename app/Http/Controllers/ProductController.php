@@ -35,7 +35,7 @@ class ProductController extends Controller
         $input = $request->all();
         $product = Product::create($input);
         if ($product) {
-            return redirect('product.index');
+            return redirect()->route('products.index');
         }else{
             return redirect()->back();
         }
@@ -71,5 +71,7 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+        $product->delete();
+        return redirect()->route('products.index');
     }
 }
