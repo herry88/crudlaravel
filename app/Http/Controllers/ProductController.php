@@ -32,12 +32,19 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+        $input = $request->all();
+        $product = Product::create($input);
+        if ($product) {
+            return redirect('product.index');
+        }else{
+            return redirect()->back();
+        }
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Product $product)
+    public function show(Product $product)# code...
     {
         //
     }
